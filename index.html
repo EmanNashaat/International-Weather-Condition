@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/assign11.css">
+    <title>My Weather</title>
+</head>
+<body>
+    <div class="Home">
+
+        <nav class="navbar navbar-expand-lg text-white py-4 px-5 ">
+            <div class="container-fluid text-white mx-5">
+              <a class="navbar-brand" href="#">
+                <div class="nav-icon d-flex justify-content-between align-items-center">
+                  <i class="fa-solid fa-cloud-moon fa-3x text-primary"></i>
+                  <div class="icon-div d-flex flex-column justify-content-around text-start ms-3">
+                      <h1 class="text-white">Weather</h1>
+                      <small class="lead">tagline goes here</small>
+                  </div>
+                </div>
+              </a>
+              <button class="navbar-toggler iconSpan" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon  iconSpan"></span>
+              </button>
+              <div class="collapse navbar-collapse " id="navbarNav">
+                <ul class="navbar-nav ms-auto text-white navUl">
+                  <li class="nav-item mx-2">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  </li>
+                  <li class="nav-item mx-2">
+                    <a class="nav-link" href="#">News</a>
+                  </li>
+                  <li class="nav-item mx-2">
+                    <a class="nav-link" href="#">Live Cameras</a>
+                  </li>
+                  <li class="nav-item mx-2">
+                    <a class="nav-link" href="#">Photos</a>
+                  </li>
+                  <li class="nav-item mx-2">
+                    <a class="nav-link" href="#">Contact</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+        </nav>
+        
+        
+        <div class="container-fluid px-0  weather position-relative">
+            <div class="py-5 d-flex align-items-center justify-content-center">
+              <div class="search-container  w-75 d-flex justify-content-between p-1 rounded-pill">
+                <input type="search" name="search" id="searchInput" placeholder="Find Your location..." class=" w-75 border-0 bg-transparent ps-3 text-white">
+                <input type="submit" name="submit" value="Find" class="ms-auto bg-primary text-white border-0 px-5 py-2 rounded-pill">
+              </div>
+            </div>
+            <div class="weather-block position-absolute  bottom-0 w-100"></div>
+
+            <!-- Main-->
+            <div class="container position-absolute top-50 start-50 translate-middle px-0 my-3 ">
+              <div class=" row w-100 text-white-50 border border-0 rounded-3 overflow-hidden wetherContainer ">
+                  <div class=" col-md-4  px-0 color-body1 pb-5  border-bottom  border-light">
+                    <div class="d-flex justify-content-between align-items-center px-3 py-2 color-title1">
+                      <span id="todayDay"></span>
+                      <span id="todayDate"></span>
+                    </div>
+                    <div class="px-4">
+                      <h5 class="py-2  countryNameShadow text-white mt-4 shadow-lg w-25 text-center rounded-pill" id="countryName"></h5>
+                      <div class="d-flex justify-content-between align-items-center degree text-white">
+                        <h1 id="weatherTemp"></h1>
+                        <i id="weatherIcon"></i>
+                      </div>
+                      <p class=" mt-4  shadow-lg fs-5 text-center py-3 border-bottom border-start" id="weatherCond"></p>
+                      <div class=" d-flex justify-content-around align-items-center p-3 text-light shadow-lg border-bottom border-end ">
+                        <div>
+                          <i class="fa-solid fa-umbrella"></i>
+                          <span>20%</span>
+                        </div>
+                        <div>
+                          <i class="fa-solid fa-wind"></i>
+                          <span>18km/h</span>
+                        </div>                          
+                        <div>
+                          <i class="fa-regular fa-compass"></i>
+                          <span>East</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class=" col-md-4  px-0 color-body2 pb-5  border-bottom  border-light">
+                    <div class=" text-center px-3 py-2 color-title2">
+                      <span id="tomorrowDate"></span>
+                    </div>
+                    <div class="h-75 d-flex flex-column justify-content-center align-items-center text-center">
+                      <div id="tommorowIcon" ></div>
+                      <div class="py-4 text-white">
+                        <h6 id="tommorowMorningTemp" class="fw-bold fs-3"></h6>
+                        <small id="tommorowNightTemp" class="fs-6"></small>
+                      </div>
+                      <div id="tommorowCustom"></div>
+                    </div>
+                  </div>
+
+                  <div class=" col-md-4  px-0 color-body1 pb-5  border-bottom  border-light">
+                    <div class=" text-center px-3 py-2 color-title1">
+                      <span id ="aftertomorrowDate"></span>
+                    </div>
+                    <div class="h-75 d-flex flex-column justify-content-center align-items-center text-center">
+                      <div id="afterTommorowIcon" ></div>
+                      <div class="py-4 text-white">
+                        <h6 id="afterTommorowMorningTemp" class="fw-bold fs-3"></h6>
+                        <small id="afterTommorowNightTemp" class="fs-6"></small>
+                      </div>
+                      <div id="afterTommorowCustom"></div>
+                    </div>
+
+                  </div>
+                  
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+      <div class=" py-5 px-1 d-flex justify-content-around">
+        <div class="search-container  w-50 d-flex justify-content-between p-1 rounded-pill">
+          <input type="search" name="search" placeholder="Enter Your email to subscribe" class=" w-75 border-0 bg-transparent ps-3 text-white">
+          <input type="submit" name="submit" value="subscribe" class="ms-auto bg-primary text-white border-0 px-4 py-2 rounded-pill">
+        </div>
+        <div class=" footer-link w-25">
+          <a href="#">
+            <div>
+              <i class="fa-brands fa-facebook-f"></i>
+            </div>
+          </a>
+          <a href="#">
+            <div>
+              <i class="fa-brands fa-twitter "></i>
+            </div>
+          </a>
+          <a href="#">
+            <div>
+              <i class="fa-brands fa-google "></i>
+            </div>
+          </a>
+          <a href="#">
+            <div>
+              <i class="fa-brands fa-linkedin "></i>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="pb-5">
+        <small class="text-white ps-5 ms-5">Copyright 2014 Company name. Designed by Themezy. All rights reserved</small>
+      </div>
+    </footer>
+
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>

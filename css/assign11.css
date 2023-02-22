@@ -1,0 +1,127 @@
+nav{
+    background-color: rgb(30, 32, 43);
+}
+.navUl li {
+    margin:0.5rem;
+}
+.navUl li a{
+    padding: 0.3rem 1.5rem !important;
+    transition: all 0.1s ease ;
+    border-radius: 30px;
+}
+
+.navUl li a:hover{
+    border: solid 2px rgb(0, 154, 216) !important ;
+    outline: dashed 1px rgb(0, 154, 216);
+}
+.navUl li a{
+    color:white !important
+}
+.active{
+    border: solid 2px rgb(0, 154, 216) !important ;
+    padding: 0.3rem 1.5rem !important;
+    border-radius: 30px;
+}
+.active:hover{
+    outline: dashed 1px rgb(0, 154, 216) !important;
+}
+
+.iconSpan{
+    background-color: rgb(0, 154, 216);
+}
+
+.icon-div h1{
+    font-size: 1rem;
+}
+.icon-div small{
+    font-size: 0.7rem;
+    letter-spacing: 0.25rem;
+    font-weight: bold;
+    color: rgb(0, 154, 216);
+}
+.weather{
+    background-image: url("../image/bg.webp");
+    background-size: cover;
+    background-position: 100% 100% ;
+    min-height: 100vh;
+    background-color: rgba(0, 0, 0, 0.295);
+    background-blend-mode: overlay;
+}
+/* .weather-block{
+    height: 40vh !important;
+    background-color: rgb(30, 32, 43);
+} */
+
+
+input:focus{
+    outline:none !important ;
+    border-radius: 30px;
+    width:100% !important;
+    background-color: transparent !important;
+}
+
+.degree h1{
+    font-size: 4rem;
+}
+.color-title1{
+    background-color: rgb(45, 48, 61);
+}
+.color-body1{
+    background-color: rgb(50, 53, 68,0.5);
+}
+
+.color-title2{
+    background-color: rgb(34, 37, 48);
+}
+.color-body2{
+    background-color: rgb(38, 41, 54,0.9);
+}
+
+.countryNameShadow{
+    text-shadow: 2px 2px 5px black !important;
+    letter-spacing: 0.25rem;
+
+}
+
+footer{
+    background-color: rgb(38, 41, 54);
+}
+.search-container{
+    background-color: rgb(30, 32, 43) !important;
+}
+
+.wetherContainer{
+    box-shadow: 2px 2px 50px 5px white;
+}
+.footer-link a{
+    text-decoration: none !important;
+    margin: 0.2rem;
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.footer-link div{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(30, 32, 43);
+    color: rgb(0, 154, 216);
+    font-size: 1.2rem;
+}
+
+.footer-link div:hover{
+    background-color: rgb(0, 154, 216);
+    color: white;
+}
+
+#weatherCond , #tommorowCustom , #afterTommorowCustom{
+    color: rgb(0, 154, 216);
+}
+
+
